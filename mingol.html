@@ -19,7 +19,16 @@
 	const todayMilli = today.getTime();
 	const kijyunMilli = kijyun.getTime();
 	const onedayMilli = 1000 * 60 * 60 * 24;
-	const pastDay = ((todayMilli - kijyunMilli) / onedayMilli) | 0)
+	const pastDay = (((todayMilli - kijyunMilli) / onedayMilli) | 0);
+
+	const idx = ((pastDay / 9) | 0);
+
+	function culcHole(kh) {
+		let h = kh + idx;
+		if ((kh <= 9 && h >= 10) || (kh >= 10 && h >= 19)) {
+			h = h - 9;
+		}
+	}
 </script>
 
 現在：<span id="todatText"></span><br/>
@@ -33,10 +42,25 @@
 		<th>コース</th><th style="width:50px;">OUT</th><th style="width:50px;">IN</th>
 	</tr>
 	<tr>
-		<td>[1] イーグル</td><td style="text-align:center;">1</td><td style="text-align:center;">10</td>
+		<td>[1] イーグル</td><td id="out1" style="text-align:center;"></td><td id="in1" style="text-align:center;"></td>
 	</tr>
 	<tr>
-		<td id="test1"></td><td id="test2"></td><td id="test3"></td>
+		<td>[2] イーグル</td><td id="out2" style="text-align:center;"></td><td id="in2" style="text-align:center;"></td>
+	</tr>
+	<tr>
+		<td>[3] イーグル</td><td id="out3" style="text-align:center;"></td><td id="in3" style="text-align:center;"></td>
+	</tr>
+	<tr>
+		<td>[4] イーグル</td><td id="out4" style="text-align:center;"></td><td id="in4" style="text-align:center;"></td>
+	</tr>
+	<tr>
+		<td>[5] イーグル</td><td id="out5" style="text-align:center;"></td><td id="in5" style="text-align:center;"></td>
+	</tr>
+	<tr>
+		<td>[6] イーグル</td><td id="out6" style="text-align:center;"></td><td id="in6" style="text-align:center;"></td>
+	</tr>
+	<tr>
+		<td>[7] イーグル</td><td id="out7" style="text-align:center;"></td><td id="in7" style="text-align:center;"></td>
 	</tr>
 </table>
 
@@ -44,6 +68,21 @@
 	document.getElementById('todatText').innerHTML = today;
 	document.getElementById('kijyunText').innerHTML = kijyun;
 	document.getElementById('pastDayText').innerHTML = pastDay;
+
+	document.getElementById('out1').innerHTML = culcHole(8);
+	document.getElementById('in1').innerHTML = culcHole(18);
+	document.getElementById('out2').innerHTML = culcHole(1);
+	document.getElementById('in2').innerHTML = culcHole(11);
+	document.getElementById('out3').innerHTML = culcHole(3);
+	document.getElementById('in3').innerHTML = culcHole(13);
+	document.getElementById('out4').innerHTML = culcHole(5);
+	document.getElementById('in4').innerHTML = culcHole(15);
+	document.getElementById('out5').innerHTML = culcHole(7);
+	document.getElementById('in5').innerHTML = culcHole(17);
+	document.getElementById('out6').innerHTML = culcHole(9);
+	document.getElementById('in6').innerHTML = culcHole(10);
+	document.getElementById('out7').innerHTML = culcHole(2);
+	document.getElementById('in7').innerHTML = culcHole(12);
 </script>
 
 <hr/>
