@@ -14,9 +14,15 @@
 </h1>
 
 <script type="text/javascript">
-	const today = new Date().getTime();
-	const kijyun = new Date(2020, 5, 15, 0, 0, 0).getTime();
+	const today = new Date();
+	const kijyun = new Date(2020, 5, 15, 0, 0, 0);
+	const todayMilli = today.getTime();
+	const kijyunMilli = kijyun.getTime();
 </script>
+
+現在：<span id="todatText" /><br/>
+基準：<span id="kijyunText" /><br/>
+※上記日時表記を元に計算します。<br/>
 
 <table border=1>
 	<tr>
@@ -31,8 +37,8 @@
 </table>
 
 <script type="text/javascript">
-	document.getElementById('test1').innerHTML = today;
-	document.getElementById('test2').innerHTML = kijyun;
+	document.getElementById('todatText').innerHTML = today;
+	document.getElementById('kijyunText').innerHTML = kijyun;
 </script>
 
 <hr/>
