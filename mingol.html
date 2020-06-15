@@ -17,9 +17,6 @@
 	const today = new Date()
 	const kijyun = new Date(Date.UTC(120, 5, 15, 9, 0, 0));
 	const oneday = new Date(Date.UTC(70, 0, 2, 0, 0, 0));
-	document.getElementById('test1').innerHTML = today;
-	document.getElementById('test2').innerHTML = kijyun;
-	document.getElementById('test3').innerHTML = oneday;
 </script>
 
 <table border=1>
@@ -33,6 +30,12 @@
 		<td id="test1"></td><td id="test2"></td><td id="test3"></td>
 	</tr>
 </table>
+
+<script type="text/javascript">
+	document.getElementById('test1').innerHTML = today;
+	document.getElementById('test2').innerHTML = kijyun;
+	document.getElementById('test3').innerHTML = oneday;
+</script>
 
 <hr/>
 </body>
