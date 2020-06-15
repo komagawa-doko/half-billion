@@ -1,0 +1,33 @@
+<html>
+<body>
+
+<hr/>
+<h1>
+	New みんなのGOLF<br/>
+	オープンコースアイテム所在ホール確認表
+</h1>
+
+<script type="text/javascript">
+	const today = new Date()
+	const kijyun = new Date(Date.UTC(120, 5, 15, 9, 0, 0));
+	const oneday = new Date(Date.UTC(70, 0, 2, 0, 0, 0));
+	document.getElementById('test1').innerHTML = today;
+	document.getElementById('test2').innerHTML = kijyun;
+	document.getElementById('test3').innerHTML = oneday;
+</script>
+
+<table border=1>
+	<tr>
+		<th>コース</th><th style="width:50px;">OUT</th><th style="width:50px;">IN</th>
+	</tr>
+	<tr>
+		<td>[1] イーグル</td><td style="text-align:center;">1</td><td style="text-align:center;">10</td>
+	</tr>
+	<tr>
+		<td id="test1"></td><td id="test2"></td><td id="test3"></td>
+	</tr>
+</table>
+
+<hr/>
+</body>
+</html>
