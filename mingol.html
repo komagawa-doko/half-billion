@@ -18,10 +18,13 @@
 	const kijyun = new Date(2020, 5, 15, 9, 0, 0);
 	const todayMilli = today.getTime();
 	const kijyunMilli = kijyun.getTime();
+	const onedayMilli = 1000 * 60 * 60 * 24;
+	const pastDay = ((todayMilli - kijyunMilli) / onedayMilli) | 0)
 </script>
 
 現在：<span id="todatText"></span><br/>
 基準：<span id="kijyunText"></span><br/>
+基準日からの日数：
 ※上記日時表記を元に計算します。<br/>
 <br/>
 
