@@ -21,7 +21,7 @@
 	const onedayMilli = 1000 * 60 * 60 * 24;
 	const pastDay = (((todayMilli - kijyunMilli) / onedayMilli) | 0);
 
-	const idx = ((pastDay / 9) | 0);
+	const idx = pastDay % 9;
 
 	function culcHole(kh) {
 		let h = kh + idx;
